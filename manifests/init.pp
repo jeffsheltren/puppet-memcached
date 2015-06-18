@@ -24,9 +24,6 @@ class memcached (
         content => template('memcached/sysconfig_memcached.erb'),
         notify  => Service['memcached'],
       }
-      package { 'policycoreutils-python':
-        ensure  => installed,
-      }
     }
 
     'debian', 'ubuntu': {
